@@ -15,6 +15,7 @@ int selectMenu(){
     printf("3. 수정\n");
     printf("4. 삭제\n");
     printf("5. 파일저장\n");
+    printf("6. 상품명 검색\n");
     printf("0. 종료     => ");
     scanf("%d", &menu);
     return menu;
@@ -76,6 +77,10 @@ int main(void){
         }
     else if(menu==5){
         savefile(plist, count);
+        continue;
+    }
+    else if(menu==6){
+        searchName(plist,count);
         continue;
     }
     }
