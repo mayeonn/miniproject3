@@ -37,6 +37,17 @@ void updateProduct(Product *p){
     scanf("%ld", &p->numofStar);
 }
 
+void savefile(Product *p, int count){
+    FILE *fp;
+    fp=fopen("product.txt", "wt");
+    for(int i=0; i<count; i++){
+        if(p[i].price==-1) continue;
+        fprintf(fp, "%s", p[i].name);
+        fprintf(fp, "%d %ld %.1f %ld\n", p[i].weight, p[i].price, p[i].star, p[i].numofStar);
+    }
+    fclose(fp);
+    printf("=>저장됨!\n");
+}
 
 int loadfile(Product *p){
     int i;

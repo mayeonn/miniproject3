@@ -14,6 +14,7 @@ int selectMenu(){
     printf("2. 추가\n");
     printf("3. 수정\n");
     printf("4. 삭제\n");
+    printf("5. 파일저장\n");
     printf("0. 종료     => ");
     scanf("%d", &menu);
     return menu;
@@ -73,6 +74,10 @@ int main(void){
             printf("=> 삭제됨! \n");
             continue;
         }
+    else if(menu==5){
+        savefile(plist, count);
+        continue;
+    }
     }
 
     printf("=> 종료됨!\n");
