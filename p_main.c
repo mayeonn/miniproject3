@@ -17,6 +17,7 @@ int selectMenu(){
     printf("5. 파일저장\n");
     printf("6. 상품명 검색\n");
     printf("7. 가격 검색\n");
+    printf("8. 리뷰수 검색\n");
     printf("0. 종료     => ");
     scanf("%d", &menu);
     return menu;
@@ -89,8 +90,11 @@ int main(void){
         searchPrice(plist,count);
         continue;
     }
+    else if(menu==8){
+        searchNumofStar(plist,count);
+        continue;
     }
-
+    }
     printf("=> 종료됨!\n");
     return 0;
 }
